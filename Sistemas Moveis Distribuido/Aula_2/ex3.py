@@ -1,5 +1,5 @@
 dinheiro = int(input("Digite quanto dinheiro você quer trocar: "))
-#	100,	50,	20,10,	5,	2	e	1
+
 mod100 = int(dinheiro / 100)
 dinheiro = dinheiro%100
 
