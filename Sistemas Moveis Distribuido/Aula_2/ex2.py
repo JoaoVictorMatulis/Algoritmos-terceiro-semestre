@@ -10,3 +10,5 @@ porcCand2 = (int(cand2)/votoTotal)*100
 porcCand3 = (int(cand3)/votoTotal)*100
 porcBranco = (int(branco)/votoTotal)*100
 porcNulo = (int(nulo)/votoTotal)*100
+
+print("\nVotos total: ",votoTotal,"\nPorcentagem Canditado1: ",porcCand1,"\nPorcentagem Canditado2: ",porcCand2,"\nPorcentagem Canditado3: ",porcCand3,"\nPorcentagem Votos em Branco: ",porcBranco,"\nPorcentagem Votos Nulos: ",porcNulo)
