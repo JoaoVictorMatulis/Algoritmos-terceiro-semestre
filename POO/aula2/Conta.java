@@ -3,11 +3,21 @@ public class Conta{
 
     private int agencia;
     private int conta;
+    private String senha;
     private double saldo;
 
-    public void Conta(){
+    public Conta(){
         
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     public int getAgencia() {
         return agencia;
     }
@@ -23,8 +33,10 @@ public class Conta{
     public double getSaldo() {
         return saldo;
     }
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public void deposito(double deposito) {
+        this.saldo += deposito;
     }
-    
+    public void saque(double saque) {
+        this.saldo -= saque;
+    }
 }
