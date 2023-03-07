@@ -1,5 +1,10 @@
-package ADO;
-
+/*
+ *  Autores:
+ *      Nome:João Victor Matulis
+ *          Id:1142445416
+ *      Nome: Bernardo Galvão de Souza
+ *          Id: 1142473154
+ */
 public class Livro {
     private int id;
     private String autor;
@@ -50,7 +55,7 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro [id=" + id + ", autor=" + autor + ", titulo=" + titulo + ", preco=" + preco + "]";
+        return "\nId:" + id + "\nAutor: " + autor + "\nTitulo: " + titulo + "\nPreço: R$%.2f"+preco;
     }
 
 }
