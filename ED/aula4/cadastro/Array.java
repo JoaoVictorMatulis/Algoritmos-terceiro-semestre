@@ -14,24 +14,23 @@ public class Array {
    * @param p Pessoa
    */
   public static void inserir(Pessoa p) {
-    if(indice < lista.length){
+    if (indice < lista.length) {
       p.setId(indice + 1);
       lista[indice++] = p;
-    }
-    else{
+    } else {
       lista = alocarNovoArray();
       inserir(p);
     }
   }
 
-  private static Pessoa[] alocarNovoArray(){
+  private static Pessoa[] alocarNovoArray() {
     Pessoa[] novo = new Pessoa[lista.length + 4];
     System.arraycopy(lista, 0, novo, 0, lista.length);
     return novo;
   }
 
   /**
-   * Exibe o conte�do relevante do array.
+   * Exibe o conteudo relevante do array.
    */
   public static void mostrar() {
     for (int i = 0; i < indice; i++) {
@@ -39,25 +38,45 @@ public class Array {
     }
   }
 
+  public static void mostrarId(int id) {
+    for (int i = 0; i < indice; i++) {
+      if (lista[i].getId() == id) {
+        System.out.println(lista[i]);
+      }
+    }
+  }
+
   /**
    * Realiza a busca, por id, de um objeto no vetor lista
+   * 
    * @param id int
    * @return Pessoa
    */
 
-  public static Pessoa buscar(int id) {
-    int inicio = 0, fim = indice-1, meio;
+  public static int buscar(int id) {
+    int inicio = 0, fim = indice - 1, meio;
     while (inicio <= fim) {
       meio = (inicio + fim) / 2;
       if (id == lista[meio].getId()) {
-        return lista[meio];
-      }
-      else if (id > lista[meio].getId()) {
+        return meio;
+      } else if (id > lista[meio].getId()) {
         inicio = meio + 1;
       } else {
         fim = meio - 1;
       }
     }
-    return null;
+    return -1;
+  }
+
+  public static boolean remover(int id) {
+    int rem = buscar(id);
+    if (rem != -1) {
+      for (int i = rem; i < indice - 1; i++) {
+        lista[i] = lista[i + 1];
+      }
+      indice--;
+      return true;
+    }
+    return false;
   }
 }
