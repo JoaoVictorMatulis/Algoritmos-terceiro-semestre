@@ -1,4 +1,5 @@
 package ADO;
+import javax.print.attribute.standard.PresentationDirection;
 import javax.swing.JOptionPane;
 public class Acesso {
     public static void main(String[] args){
@@ -9,13 +10,30 @@ public class Acesso {
             escolhas, escolhas [0]);
             if(selectedValue != "Desligar Programa"){
                 switch((String)selectedValue){
-                    case "Criar conta":  
+                    case "Adicionar Livro":
+                        adicionarLivro();
                         break;
-                    case "Login":
+                    case "Pesquisar Livro":
+                        pesquisarLivro();
+                        break;
+                    case "Remover Livro":
+                        removerLivro();
                         break;
                 }
             }
         }while(selectedValue != "Desligar Programa");
+    }
+
+    public static void adicionarLivro(){
         
     }
+
+    public static void pesquisarLivro(){
+    
+    }
+
+    public static void removerLivro(){
+    
+    }
 }
+
