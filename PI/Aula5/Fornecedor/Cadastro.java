@@ -78,3 +78,56 @@ public class Cadastro {
         return novo;
     }
 }
+
+/*
+ * https://dontpad.com/marcos2023
+
+
+package poo2023.aula4;
+import javax.swing.JOptionPane;
+public class CadastraFornecedor {
+	public static void main(String[] args) {
+		int qtd = Integer.parseInt(JOptionPane.showInputDialog(
+				"Digite a quantidade de Fornecedores a cadastrar:"));
+		Fornecedor fornecedores[] = new Fornecedor[qtd];
+		
+		for(int i=0 ; i<fornecedores.length ; i++) {
+			int tipo = Integer.parseInt(JOptionPane.showInputDialog(
+					"Digite: \n1-Pessoa \n2-Empresa"));
+                String nome = JOptionPane.showInputDialog(
+						"Digite o nome do Fornecedor:");
+				String telefone = JOptionPane.showInputDialog(
+						"Digite o telefone do Fornecedor:");
+			if(tipo==1) {				
+				String cpf = JOptionPane.showInputDialog(
+						"Digite o CPF do Fornecedor:");
+				String rg = JOptionPane.showInputDialog(
+						"Digite o RG do Fornecedor:");
+				FornecedorPessoa fornecedorPessoa = new FornecedorPessoa(
+						nome, telefone, cpf, rg);
+				fornecedores[i] = fornecedorPessoa;
+			}
+			else if(tipo==2) {				
+				String nome = JOptionPane.showInputDialog(
+				String ie = JOptionPane.showInputDialog(
+						"Digite a Inscricao Estadual:");
+				String cnpj = JOptionPane.showInputDialog(
+						"Digite o CNPJ do Fornecedor:");
+				FornecedorEmpresa fornecedorEmpresa = new FornecedorEmpresa(
+						nome, telefone, ie, cnpj);
+				fornecedores[i] = fornecedorEmpresa;
+			}
+		}
+		for(int i=0 ; i<fornecedores.length ; i++) {
+			if(fornecedores[i] instanceof FornecedorPessoa) {
+				FornecedorPessoa pessoa = (FornecedorPessoa)fornecedores[i];
+				System.out.println(pessoa);
+			}
+			else if(fornecedores[i] instanceof FornecedorEmpresa) {
+				FornecedorEmpresa empresa = (FornecedorEmpresa)fornecedores[i];
+				System.out.println(empresa);
+			}
+		}		
+	}
+}
+ */
