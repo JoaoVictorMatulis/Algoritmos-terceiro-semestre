@@ -10,5 +10,18 @@ public class UsaCliente {
         lista.inserir(new Contato("Leo","580232344"));
         lista.inserir(new Contato("Ana","5923422"));
         lista.mostrar();
+        Object a = lista.pesquisar(1)[0];
+        if(a == null){
+            System.out.println("Não achei");
+        }else{
+            System.out.println("\n"+a);
+        }
+        System.out.println();
+        if(lista.remover(3)){
+            System.out.println("Removeu\n");
+        }else{
+            System.out.println("Não removeu\n");
+        }
+        lista.mostrar();
     }
 }
