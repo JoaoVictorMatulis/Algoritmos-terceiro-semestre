@@ -11,6 +11,10 @@ public class Lista {
     return inicio == null;
   }
 
+  /**
+   * Insere um novo elemento na lista duplamente ligada
+   * @param objeto Object
+   */
   public void inserir(Object objeto) {
     if (verificar()) {// lista vazia
       inicio = new Elemento(null, null, objeto);
@@ -22,6 +26,11 @@ public class Lista {
     }
   }
 
+  /**
+   * Insere um novo elemento na lista duplamente ligada apartir de um posição passada por parametro
+   * @param objeto Object
+   * @param posicao int
+   */
   public void inserir(Object objeto, int posicao) {
     if(verificar()){
       inicio = new Elemento(null, null, objeto);
@@ -50,7 +59,7 @@ public class Lista {
   }
 
   /**
-     * Conta e imprime o total de elementos na lista encadeada
+     * Conta e retorna o total de elementos na lista duplamente encadeada
      */
     public int totalElemento() {
       int contador = 0;
