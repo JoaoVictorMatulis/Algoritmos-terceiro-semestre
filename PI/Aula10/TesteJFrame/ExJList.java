@@ -57,6 +57,7 @@ public class ExJList extends JFrame implements
         if (e.getSource() == t1)// verifica se foi disparado objeto t1
         {
             listModel.addElement(t1.getText()); // adiciona itens a lista
+            System.out.println(t1.getText());
             t1.setText(""); // Limpa a caixa de texto
         }
         if (e.getSource() == bquant)
