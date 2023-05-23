@@ -23,5 +23,11 @@ public class UsaABB {
         a.ordem(a.getRaiz());
         System.out.print("\nPós-ordem: ");
         a.posordem(a.getRaiz());
+        System.out.println("\n"+a.pesquisar(a.getRaiz(), 10));
+        System.out.println(a.grau(a.getRaiz(), 34));
+        a.remover(a.getRaiz(), 10);
+        System.out.print("\nOrdem: ");
+        a.ordem(a.getRaiz());
+        System.out.println("\n"+a.getAltura(a.getRaiz()));
     }
 }
